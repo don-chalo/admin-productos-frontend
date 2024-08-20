@@ -62,7 +62,7 @@ export async function getProductById(id: Product['id']) {
     }
 };
 
-export async function updateProduct(id: Product['id'], product: Product) {
+export async function updateProduct(id: Product['id'], product: ProductData) {
     try {
         const NumberSchema = pipe(string(), transform(Number), number());
         const result = safeParse(ProductSchema, {
